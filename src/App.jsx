@@ -1,5 +1,4 @@
 import "./App.css";
-import Center from "./components/Center";
 import Inits from "./libs/inits";
 
 function App() {
