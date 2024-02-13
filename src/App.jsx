@@ -1,5 +1,5 @@
 import "./App.css";
-import Inits from "./libs/inits";
+import Inits from "./libs/Inits";
 
 function App() {
   return (
