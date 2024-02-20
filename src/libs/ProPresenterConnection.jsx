@@ -6,7 +6,9 @@ const connectWebSocket = (
   handleAction,
   onCloseCallback
 ) => {
-  const webSocket = new WebSocket(`ws://${host}/remote`);
+  // Determine the protocol based on wether the app is served over HTTPS or HTTP
+  const protocol = window.location.protocol === "https:" ? "wss" : "ws";
+  const webSocket = new WebSocket(`${protocol}://${host}/remote`);
 
   webSocket.onopen = () => {
     console.log("Connecting to ProPresenter WebSocket");
