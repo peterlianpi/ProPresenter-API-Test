@@ -8,7 +8,7 @@ const connectWebSocket = (
 ) => {
   // Determine the protocol based on wether the app is served over HTTPS or HTTP
   // const protocol = window.location.protocol === "https:" ? "wss" : "ws";
-  const protocol=ws
+  const protocol = "ws";
   const webSocket = new WebSocket(`${protocol}://${host}/remote`);
 
   webSocket.onopen = () => {
